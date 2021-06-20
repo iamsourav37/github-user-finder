@@ -70,13 +70,9 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                {context.user ? (
+                {context.user?.email ? (
                   <li className="nav-item">
-                    <NavLink
-                      className="nav-link"
-                      to="/signin"
-                      activeClassName="active"
-                    >
+                    <NavLink className="nav-link" activeClassName="active">
                       Signout
                     </NavLink>
                   </li>
