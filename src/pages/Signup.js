@@ -3,6 +3,8 @@ import React from "react";
 import "./Signin.css";
 
 function Signup() {
+  document.title = "Signup Page";
+
   return (
     <main className="form-signin mt-5">
       <form>

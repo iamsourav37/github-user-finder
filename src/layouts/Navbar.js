@@ -3,6 +3,8 @@ import UserContext from "../context/UserContext";
 import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
+  const context = useContext(UserContext);
+
   return (
     <div>
       <header>
@@ -14,6 +16,9 @@ function Navbar() {
             >
               React Firebase
             </Link>
+            <h6 className="text-warning text-uppercase font-weight-bold ms-5 mt-3">
+              {context.user?.email ? context.user : null}
+            </h6>
             <button
               className="navbar-toggler"
               type="button"
@@ -64,6 +69,18 @@ function Navbar() {
                     Signin
                   </NavLink>
                 </li>
+
+                {context.user ? (
+                  <li className="nav-item">
+                    <NavLink
+                      className="nav-link"
+                      to="/signin"
+                      activeClassName="active"
+                    >
+                      Signout
+                    </NavLink>
+                  </li>
+                ) : null}
               </ul>
             </div>
           </div>

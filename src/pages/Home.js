@@ -1,6 +1,8 @@
 import React from "react";
 
 function Home() {
+  document.title = "Home Page";
+
   return (
     <div className="bg-warning p-4">
       <h1>home page</h1>

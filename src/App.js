@@ -29,6 +29,10 @@ import Navbar from "./layouts/Navbar";
 // user context
 import UserContext from "./context/UserContext";
 
+// Initialize Firebase
+import firebaseConfig from "./config/firebaseConfig";
+firebase.initializeApp(firebaseConfig);
+
 function App() {
   const [user, setUser] = useState(null);
 
